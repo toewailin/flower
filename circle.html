@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Diagram</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
+    <style>
+      svg {
+        display: block;
+        margin: 0 auto;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      width="300"
+      height="300"
+      viewBox="0 0 300 300"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        cx="150"
+        cy="150"
+        r="100"
+        stroke="#000"
+        stroke-width="4"
+        fill="none"
+        id="animatedCircle"
+      />
+    </svg>
+
+    <script>
+      // Animate the SVG circle outline
+      gsap.fromTo(
+        "#animatedCircle",
+        { drawSVG: "0% 0%" },
+        { drawSVG: "0% 100%", duration: 2, ease: "power1.inOut" }
+      );
+    </script>
+  </body>
+</html>
