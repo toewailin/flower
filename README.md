@@ -1,4 +1,6 @@
 # flower
-Blooming Flower
+Blooming Flower, Circle & Star
 
 [circle](circle.html)
+
+[star](star.html)
