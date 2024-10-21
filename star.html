@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Star</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/DrawSVGPlugin3.min.js"></script>
+    <style>
+      svg {
+        display: block;
+        margin: 0 auto;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      width="300"
+      height="300"
+      viewBox="0 0 300 300"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <polygon
+        points="150,25 179,111 269,111 197,165 223,251 150,200 77,251 103,165 31,111 121,111"
+        stroke="#000"
+        stroke-width="4"
+        fill="none"
+        id="animatedStar"
+      />
+    </svg>
+
+    <script>
+      // Animate the SVG star outline
+      gsap.fromTo(
+        "#animatedStar",
+        { drawSVG: "0% 0%" },
+        { drawSVG: "0% 100%", duration: 2, ease: "power1.inOut" }
+      );
+    </script>
+  </body>
+</html>
